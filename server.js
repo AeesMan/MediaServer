@@ -5,7 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const app = express();
 
 cloudinary.config({

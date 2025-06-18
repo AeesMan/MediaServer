@@ -15,7 +15,10 @@ cloudinary.config({
 });
 
 app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" }));
-app.use(cors());
+app.use(cors({
+  origin: 'https://media-player-plum-seven.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
